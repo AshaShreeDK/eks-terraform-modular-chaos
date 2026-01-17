@@ -2,7 +2,7 @@
 .terraform/
 *.tfstate
 *.tfstate.backup
-*.tfvars
+
 crash.log
 
 # Terraform lock file (optional)
