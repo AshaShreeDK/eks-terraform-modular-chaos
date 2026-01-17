@@ -1,0 +1,19 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: a2a-network-latency
+  namespace: a2a-chaos
+spec:
+  action: delay
+  mode: one
+  selector:
+    namespaces:
+      - a2a-app
+    labelSelectors:
+      app: a2a-nginx
+  delay:
+    latency: "300ms"
+    correlation: "100"
+    jitter: "50ms"
+  duration: "120s"
+

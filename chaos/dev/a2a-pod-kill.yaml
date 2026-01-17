@@ -1,0 +1,15 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: a2a-pod-kill-nginx
+  namespace: a2a-chaos
+spec:
+  action: pod-kill
+  mode: one
+  selector:
+    namespaces:
+      - a2a-app
+    labelSelectors:
+      app: a2a-nginx
+  duration: "60s"
+

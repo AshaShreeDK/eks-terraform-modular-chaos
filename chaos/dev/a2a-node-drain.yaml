@@ -1,0 +1,13 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NodeChaos
+metadata:
+  name: a2a-node-drain
+  namespace: a2a-chaos
+spec:
+  action: drain
+  mode: one
+  selector:
+    namespaces:
+      - a2a-app
+  duration: "180s"
+
