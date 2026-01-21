@@ -1,7 +1,7 @@
 region       = "us-east-1"
-customer     = "A2A"
+customer     = "dlr"
 env          = "prod"
-cluster_name = "A2A-EKS-PROD"
+cluster_name = "EKS-PROD"
 
 vpc_cidr           = "10.40.0.0/16"
 public_subnets     = ["10.40.10.0/24", "10.40.15.0/24"]
